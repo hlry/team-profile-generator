@@ -1,6 +1,6 @@
 # Team Profile Generator
 
-![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
 ## Table of Contents
 * [Description](#Description)
@@ -31,7 +31,7 @@ Then run the following command:
 
 ## LICENSE
 This repository is licensed under the 'Apache License 2.0'.
-Refer to https://opensource.org/licenses/Apache-2.0) for complete license terms.
+Refer to https://opensource.org/licenses/Apache-2.0 for complete license terms.
 
 ## CONTRIBUTING
 This project is not accepting contributions but if you send a pull request, it could be accepted under the terms of the Apache 2.0 license.
