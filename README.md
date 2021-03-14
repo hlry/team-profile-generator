@@ -37,5 +37,4 @@ Refer to https://opensource.org/licenses/Apache-2.0 for complete license terms.
 This project is not accepting contributions but if you send a pull request, it could be accepted under the terms of the Apache 2.0 license.
 
 ## Questions
-
 If you have questions contact me on GitHub at [hlry](https://github.com/hlry).
