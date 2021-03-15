@@ -27,7 +27,9 @@ To install dependencies, run the following in your Command Line Interface (e.g.,
 
 ## Usage
 Then run the following command:
-- node app.js
+- node index.js
+
+The resulting index.html will be located in the dist/ subdirectory, along with the css stylesheet for your Team webpage.
 
 ## LICENSE
 This repository is licensed under the 'Apache License 2.0'.

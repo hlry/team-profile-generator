@@ -1,0 +1,24 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+    --primary: rgb(255, 0, 85);
+    --cardtop: rgba(33, 91, 216, 0.993); 
+    --text: black;
+    --cardbackground: white;
+  }
+
+html body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    background-color: white;
+    border: 1 px;
+    color: var(--text);
+}
+
+

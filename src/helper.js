@@ -1,38 +1,40 @@
-const createTeam = (team) => {
-    // create multiple functions for each of the managers the engineer, intern, return the html
-    const printManager = (manager) => {
-        return `<div class = "card manager" >
 
-        </div>`
-    }
-    const printEngineer = (engineer) => {
-        return `<div class = "card engineer" >
-        </div>`
-    }
-    {
-        const printIntern = (intern) => {
-            return `<div class = "card intern" >
-            </div>`
-        }
-    }
+const printManager = (manager) => {
+    return `<div class = "box manager" >
+    ${manager.name}
+    </div>`
 }
 
-const createHelper = () => {
+const printEngineer = (engineer) => {
+    return `<div class = "box engineer" >
+    ${engineer.name}
+    </div>`
+}
+
+const printIntern = (intern) => {
+    return `<div class = "box intern" >
+    ${intern.name}
+    </div>`
+}
+
+const createHelper = (team) => {
 
     return `
-    < !DOCTYPE html >
+    <!DOCTYPE html>
     <html lang="en">
 
     <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style href: // include link to dist/style.css>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <title>My Team</title>
     </head>
 
     <body>
-    ${createTeam(team)}
+    ${team}
+
     </body>
 
     </html>
@@ -41,4 +43,5 @@ const createHelper = () => {
 
 createHelper();
 
-module.exports = Helper;
+// export object containing these functions
+module.exports = { printManager, printEngineer, printIntern, createHelper }

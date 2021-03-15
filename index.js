@@ -5,7 +5,7 @@ const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const Helper = require('./src/helper');
+const { printManager, printEngineer, printIntern, createHelper } = require('./src/helper');
 
 
 let team = [];
@@ -38,7 +38,8 @@ const openingPrompts = () => {
         ]).then((managerAnswers) => {
             const manager = new Manager(managerAnswers.name, managerAnswers.email, managerAnswers.id, managerAnswers.officeNumber);
             // push to team array of employees
-            team.push(manager);
+            team.push(printManager(manager));
+
             // check if additional employees to add
             teammateOptions();
         })
@@ -60,8 +61,7 @@ const teammateOptions = () => {
             } else if (teammateAnswer.role === 'Intern') {
                 InternPrompts();
             } else {
-                // console.log(team);
-                writeHTML('./dist/index.html', Helper(team))
+                writeHTML('./dist/index.html', createHelper(team.join('')))
             }
         })
 };
@@ -94,7 +94,7 @@ const EngineerPrompts = () => {
 
         .then((engineerAnswers) => {
             const engineer = new Engineer(engineerAnswers.name, engineerAnswers.email, engineerAnswers.id, engineerAnswers.github);
-            team.push(engineer);
+            team.push(printEngineer(engineer));
             teammateOptions();
         })
 };
@@ -127,7 +127,7 @@ const InternPrompts = () => {
         ])
         .then((internAnswers) => {
             const intern = new Intern(internAnswers.name, internAnswers.email, internAnswers.id, internAnswers.school);
-            team.push(intern);
+            team.push(printIntern(intern));
             teammateOptions();
         })
 };
