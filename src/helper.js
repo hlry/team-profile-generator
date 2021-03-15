@@ -3,9 +3,9 @@ const printManager = (manager) => {
     return `<div class = "box manager" >
     ${manager.name}, Manager
     <div>
-    ${manager.id}
-    ${manager.email}
-    ${manager.officeNumber}
+    Id: ${manager.id}
+    Email: ${manager.email}
+    Number: ${manager.officeNumber}
     </div>
     </div>`
 }
@@ -14,9 +14,9 @@ const printEngineer = (engineer) => {
     return `<div class = "box engineer" >
     ${engineer.name}, Engineer
     <div>
-    ${engineer.id}
-    ${engineer.email}
-    ${engineer.gitHub}
+    Id: ${engineer.id}
+    Email: ${engineer.email}
+    GitHub: ${engineer.gitHub}
     </div>    
     </div>`
 }
@@ -25,9 +25,9 @@ const printIntern = (intern) => {
     return `<div class = "box intern" >
     ${intern.name}, Intern
     <div>
-    ${intern.id}
-    ${intern.email}
-    ${intern.school}
+    Id: ${intern.id}
+    Email: ${intern.email}
+    University: ${intern.school}
     </div>  
     </div>`
 }
