@@ -7,6 +7,8 @@
 * [GitHub Repo](#GitHub)
 * [Installation](#Installation)
 * [Usage](#Usage)
+* [Walkthrough](#Walkthrough)
+* [Screenshot](#Screenshot)
 * [LICENSE](#LICENSE)
 * [CONTRIBUTING](#CONTRIBUTING)
 * [Questions](#Questions)
@@ -30,6 +32,12 @@ Then run the following command:
 - node index.js
 
 The resulting index.html will be located in the dist/ subdirectory, along with the css stylesheet for your Team webpage.
+
+## Walkthrough
+  ![Screenshot of walkthrough video](/assets/Screenshot2.png)
+
+## Screenshot
+![Screenshot of site](/assets/Screenshot.png)
 
 ## LICENSE
 This repository is licensed under the 'Apache License 2.0'.
