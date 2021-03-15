@@ -1,10 +1,12 @@
 const inquirer = require('inquirer');
-const { fstat } = require('fs');
+const fs = require('fs');
 
 const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const Helper = require('./src/helper');
+
 
 let team = [];
 
@@ -58,7 +60,8 @@ const teammateOptions = () => {
             } else if (teammateAnswer.role === 'Intern') {
                 InternPrompts();
             } else {
-                writeHTML(team);
+                // console.log(team);
+                writeHTML('./dist/index.html', Helper(team))
             }
         })
 };
@@ -122,7 +125,6 @@ const InternPrompts = () => {
                 message: "What is the intern's school?"
             }
         ])
-
         .then((internAnswers) => {
             const intern = new Intern(internAnswers.name, internAnswers.email, internAnswers.id, internAnswers.school);
             team.push(intern);
@@ -130,16 +132,27 @@ const InternPrompts = () => {
         })
 };
 
+// generateFile
+// push in a string with the html already defined -- join all of the strings
+// singel string html file
+// push in a string containing html
+// TODO: Create a function to generate markdown for README
+// function generatePage(team) {
+//     return 
+// }
 
-// complete team and write HTML
-const writeHTML = () => {
-    fstat.writeFileSync('./index.html', generatePage(team), err => {
-        if (err) throw err;
-        console.log('Page complete.')
-    })
+
+
+
+// function to write HTML file
+function writeHTML(fileName, data) {
+    fs.writeFile(fileName, data, function (err) {
+        if (err) {
+            return console.log(err);
+        } else
+            console.log("Success! index.html file was created!");
+    });
 };
-
-
 
 // function call to initialize app
 openingPrompts();
