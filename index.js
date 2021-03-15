@@ -132,15 +132,6 @@ const InternPrompts = () => {
         })
 };
 
-// generateFile
-// push in a string with the html already defined -- join all of the strings
-// singel string html file
-// push in a string containing html
-// TODO: Create a function to generate markdown for README
-// function generatePage(team) {
-//     return 
-// }
-
 
 
 

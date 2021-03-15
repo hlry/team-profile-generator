@@ -1,19 +1,34 @@
 
 const printManager = (manager) => {
     return `<div class = "box manager" >
-    ${manager.name}
+    ${manager.name}, Manager
+    <div>
+    ${manager.id}
+    ${manager.email}
+    ${manager.officeNumber}
+    </div>
     </div>`
 }
 
 const printEngineer = (engineer) => {
     return `<div class = "box engineer" >
-    ${engineer.name}
+    ${engineer.name}, Engineer
+    <div>
+    ${engineer.id}
+    ${engineer.email}
+    ${engineer.gitHub}
+    </div>    
     </div>`
 }
 
 const printIntern = (intern) => {
     return `<div class = "box intern" >
-    ${intern.name}
+    ${intern.name}, Intern
+    <div>
+    ${intern.id}
+    ${intern.email}
+    ${intern.school}
+    </div>  
     </div>`
 }
 
@@ -33,6 +48,17 @@ const createHelper = (team) => {
     </head>
 
     <body>
+    <section class="hero is-medium is-primary is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+
+                    My Team
+
+                </h1>
+            </div>
+        </div>
+    </section>
     ${team}
 
     </body>
